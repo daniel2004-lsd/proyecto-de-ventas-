@@ -2,10 +2,12 @@ package sena.crudbasic.repository;
 
 import java.util.List;
 
-import javax.management.relation.Role;
+
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
+
+import sena.crudbasic.model.Role;
 
 public interface RoleRepository extends JpaRepository<Role, Integer> {
  @Query(""

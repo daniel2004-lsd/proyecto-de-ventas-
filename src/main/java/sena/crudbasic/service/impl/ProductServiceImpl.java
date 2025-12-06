@@ -1,7 +1,6 @@
 package sena.crudbasic.service.impl;
 
 import java.util.List;
-import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -70,11 +69,11 @@ public class ProductServiceImpl implements ProductService {
             throw new IllegalStateException("El producto con id " + id + " no existe");
         }
 
-        Product entity = ProductMapper.toEntity(dto);
-        entity.setIdProduct(id);
-        Product saved = repo.save(entity);
+        ProductMapper.updateEntityFromDto(dto, existing);
 
-        return ProductMapper.toDto(saved);  
+        Product saved = repo.save(existing);
+
+        return ProductMapper.toDto(saved);
 
     }
 

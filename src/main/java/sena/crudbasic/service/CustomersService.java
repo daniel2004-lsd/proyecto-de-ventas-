@@ -2,7 +2,6 @@ package sena.crudbasic.service;
 import java.util.List;
 
 import sena.crudbasic.Dto.CustomersDto;
-import sena.crudbasic.model.Customers;
 
 
 
