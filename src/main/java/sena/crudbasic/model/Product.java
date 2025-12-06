@@ -20,6 +20,9 @@ public class Product {
     @Column(name = "id_producs")
     private int idProduct;
 
+    public Product() {
+    }
+
     @Column(name = "name")
     private String name;
 
@@ -28,4 +31,43 @@ public class Product {
     
     @Column(name = "stock")
     private int stock;
+
+    public Product(int idProduct, String name, BigDecimal price, int stock) {
+        this.idProduct = idProduct;
+        this.name = name;
+        this.price = price;
+        this.stock = stock;
+    }
+
+    public int getIdProduct() {
+        return idProduct;
+    }
+
+    public void setIdProduct(int idProduct) {
+        this.idProduct = idProduct;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public BigDecimal getPrice() {
+        return price;
+    }
+
+    public void setPrice(BigDecimal price) {
+        this.price = price;
+    }
+
+    public int getStock() {
+        return stock;
+    }
+
+    public void setStock(int stock) {
+        this.stock = stock;
+    }
 }

@@ -21,6 +21,36 @@ public class Categories {
 
     @Column(name = "description")
     private String description;
+
+    public int getIdCategories() {
+        return idCategories;
+    }
+
+    public Categories(int idCategories, String name, String description) {
+        this.idCategories = idCategories;
+        this.name = name;
+        this.description = description;
+    }
+
+    public void setIdCategories(int idCategories) {
+        this.idCategories = idCategories;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
     
 
 }
